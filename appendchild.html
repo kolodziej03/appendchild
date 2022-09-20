@@ -7,9 +7,12 @@
   </head>
   <body>
     <div>
-      <input type="text" name="dodanie" id="dod" />
+      tekst<input type="text" name="dodanie" id="dod" />
       <label
-        >kolor tekstu <input type="text" name="kolor" id="kolor" value="#"
+        >kolor tekstu:<input type="text" name="kolor" id="kolor" value="#"
+      /></label>
+      <label
+        >kolor tła: <input type="text" name="tkolor" id="tlo" value="#"
       /></label>
       <button>dodaj</button>
       <p></p>
@@ -19,13 +22,13 @@
       const btn = document.querySelector("button");
       const t = document.querySelector("#dod");
       const kolor = document.querySelector("#kolor");
-
+      const tlo = document.querySelector("#tlo");
       btn.addEventListener("click", function () {
         const p = document.createElement("p");
         div.appendChild(p);
         p.innerHTML = t.value;
         p.style.color = kolor.value;
-        p.style.backgroundColor = "#587BEB";
+        p.style.backgroundColor = tlo.value;
       });
     </script>
   </body>
