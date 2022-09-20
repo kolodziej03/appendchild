@@ -8,6 +8,9 @@
   <body>
     <div>
       <input type="text" name="dodanie" id="dod" />
+      <label
+        >kolor tekstu <input type="text" name="kolor" id="kolor" value="#"
+      /></label>
       <button>dodaj</button>
       <p></p>
     </div>
@@ -15,12 +18,13 @@
       const div = document.querySelector("div");
       const btn = document.querySelector("button");
       const t = document.querySelector("#dod");
+      const kolor = document.querySelector("#kolor");
 
       btn.addEventListener("click", function () {
         const p = document.createElement("p");
         div.appendChild(p);
         p.innerHTML = t.value;
-        p.style.color = "#EBD909";
+        p.style.color = kolor.value;
         p.style.backgroundColor = "#587BEB";
       });
     </script>
